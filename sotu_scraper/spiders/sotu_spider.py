@@ -16,6 +16,9 @@ class SotuSpider(scrapy.Spider):
         yield {
             "potus": response.css(".diet-title a::text").get(),
             "date": response.css(".field-docs-start-date-time span::text").get(),
+            "categories": response.css(
+                ".field-ds-filed-under- + .label-above ~ div a::text"
+            ).getall(),
             "speech_html": " ".join(
                 response.css(".field-docs-content p::text").getall()
             ),
