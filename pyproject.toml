@@ -12,7 +12,7 @@ pandas = "^2.2.2"
 nltk = "^3.9.1"
 contractions = "^0.1.73"
 matplotlib = "^3.9.2"
-fastparquet = "^2024.5.0"
+pyarrow = "^17.0.0"
 
 
 [tool.poetry.group.dev.dependencies]
